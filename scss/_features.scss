@@ -1,0 +1,55 @@
+.features {
+    background-color: $light-grayish-blue;
+    text-align: center;
+
+    h2 {
+        width: 10rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .title {
+        color: $dark-blue;
+        font-weight: 300;
+        margin-bottom: 1.375rem;
+    }
+
+    .description {
+        margin-bottom: 3.5rem;
+    }
+
+    .wrapper {
+        justify-content: center;
+        gap: 2rem;
+    }
+
+    .feature {
+        max-width: 16.25rem;
+
+        img {
+            margin-bottom: 1.625rem;
+        }
+    }
+
+    @include breakpoints-up(medium) {
+        text-align: start;
+
+        .wrapper {
+            flex-wrap: nowrap;
+        }
+
+        h2 {
+            width: fit-content;
+            margin-left: 0;
+            margin-right: 0;
+        }
+
+        .title {
+            margin-bottom: 2rem;
+        }
+
+        .description {
+            max-width: 39.5rem;
+        }
+    }
+}

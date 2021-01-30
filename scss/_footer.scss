@@ -1,0 +1,108 @@
+.footer {
+    background-color: $dark-blue;
+    padding-top: 2.875rem;
+    padding-bottom: 2.875rem;
+
+    &-logo {
+        width: 8.75rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .social {
+        text-align: center;
+
+        &-links {
+            list-style: none;
+            margin-top: 1.875rem;
+
+            li {
+                display: inline-block;
+
+                &:not(:last-child) {
+                    margin-right: 0.875rem;
+                }
+
+                a:active {
+                    filter: invert(10%) sepia(22%) saturate(1954%) hue-rotate(67deg) brightness(91%) contrast(81%);
+                }
+            }
+        }
+    }
+
+    .info {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+
+        .column1,
+        .column2 {
+            text-align: center;
+
+            li {
+                list-style: none;
+            }
+
+            a {
+                color: $white;
+
+                &:active {
+                    color: $lime-green;
+                }
+            }
+        }
+
+        .column1 {
+            li {
+                margin-bottom: 1.25rem;
+            }
+        }
+
+        .column2 {
+            li {
+                &:not(:last-child) {
+                    margin-bottom: 1.25rem;
+                }
+            }
+        }
+    }
+
+    .rights {
+        text-align: center;
+
+        button {
+            margin-bottom: 1.625rem;
+        }
+    }
+
+    @include breakpoints-up(medium) {
+        display: flex;
+        justify-content: space-between;
+        max-height: 11.875rem;
+
+        .social-links {
+            margin-top: 3.25rem;
+        }
+
+        .info {
+            display: flex;
+            justify-content: space-between;
+            padding-top: 0;
+            padding-bottom: 0;
+            width: 18.4375rem;
+
+            .column1,
+            .column2 {
+                text-align: start;
+
+                a {
+                    font-size: $font-sm;
+                }
+            }
+        }
+
+        .rights {
+            text-align: end;
+            font-size: $font-sm;
+        }
+    }
+}

@@ -1,0 +1,71 @@
+.articles {
+    background-color: $very-light-gray;
+
+    .wrapper {
+        justify-content: center;
+        gap: 1.875rem;
+    }
+
+    .title {
+        color: $dark-blue;
+        font-weight: 300;
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    .card {
+        background-color: $white;
+        max-width: 18.75rem;
+        border-radius: 5px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        transition: all 150ms ease-in-out;
+
+        img {
+            width: 100%;
+            height: 11.5625rem;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+        }
+
+        &:hover {
+            box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+            transform: scale(1.05);
+        }
+
+        &-content {
+            padding: 1.875rem;
+        }
+
+        .author {
+            font-size: $font-xsm;
+        }
+
+        .link {
+            font-size: 1rem;
+            color: $dark-blue;
+            display: inline-block;
+            margin-top: 0.75rem;
+            margin-bottom: 0.75rem;
+
+            &:active {
+                color: $bright-cyan;
+                // color: $lime-green;
+                // text-shadow: 0px 0px 0px black;
+            }
+        }
+
+        .briefing {
+            font-size: $font-sm;
+        }
+    }
+
+    @include breakpoints-up(medium) {
+        .title {
+            text-align: start;
+        }
+
+        .wrapper {
+            flex-wrap: nowrap;
+        }
+    }
+}

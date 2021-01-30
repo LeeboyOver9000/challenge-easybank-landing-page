@@ -1,0 +1,98 @@
+.main {
+    background-color: $very-light-gray;
+
+    // .image {
+    //     position: relative;
+    //     width: 100%;
+    //     background-image: url('/images/bg-intro-mobile.svg');
+    //     background-size: cover;
+    //     background-repeat: no-repeat;
+    //     background-position: center center;
+    //     height: 17.5rem;
+
+    //     &::before {
+    //         content: '';
+    //         width: 100%;
+    //         height: 100%;
+    //         position: absolute;
+    //         background-image: url('/images/bg-intro-mobile.svg');
+    //         background-size: 86%;
+    //         background-repeat: no-repeat;
+    //         background-position: center bottom;
+    //     }
+    // }
+
+    .image {
+        position: relative;
+        width: 100%;
+        height: 17.5rem;
+
+        &::before {
+            content: '';
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            background-image: url('/images/bg-intro-mobile.svg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+
+        &::after {
+            content: '';
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            background-image: url('/images/image-mockups.png');
+            background-size: 86%;
+            background-repeat: no-repeat;
+            background-position: center bottom;
+        }
+    }
+
+    .description {
+        text-align: center;
+
+        h1 {
+            color: $dark-blue;
+            font-weight: 300;
+            line-height: 1;
+            font-size: 2.25rem;
+            padding-bottom: 1.25rem;
+        }
+
+        p {
+            padding-bottom: 2rem;
+            font-size: $font-sm;
+            line-height: 1.5;
+        }
+    }
+
+    @include breakpoints-up(medium) {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+
+        .image {
+            flex-grow: 2;
+            height: 41rem;
+
+            &::before {
+                width: 200%;
+                background-image: url('/images/bg-intro-desktop.svg');
+                background-position: left center;
+            }
+
+            &::after {
+                background-size: 100%;
+                left: 20%;
+                height: 115%;
+            }
+        }
+
+        .description {
+            flex-grow: 1;
+            text-align: start;
+        }
+    }
+}
